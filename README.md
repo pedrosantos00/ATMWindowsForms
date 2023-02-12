@@ -22,7 +22,7 @@ SQL Server
 ## **Installation**
 
 Clone the repository to your local machine using the following command:<br>
-git clone https://github.com/[YourUsername]/ATM-Windows-Forms.git<br>
+git clone https://github.com/pedrosantos00/ATMWindowsForms.git<br>
 Open the solution file ATM-Windows-Forms.sln using Visual Studio.<br>
 
 Go to the app.config file and put in your connection string.<br>
