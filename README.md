@@ -1,5 +1,5 @@
 ### ATMWindowsForms
-
+![Screenshot 2023-02-12 155451](https://user-images.githubusercontent.com/62798656/218324027-f4fc186c-e01b-4b8f-a340-50c7108dc25b.png)  <br>
 ATM Windows Forms is a desktop application designed to simulate an ATM machine. It offers a range of features including login, deposit, transfer, withdraw, data editing, and more. The application is built using the Windows Forms framework and .NET Core 6, providing a user-friendly interface and a smooth experience. The application also makes use of asynchronous programming to improve performance.
 
 ## **Features**
@@ -33,6 +33,20 @@ Use SQL Server Management Studio to create the database.<br>
 Open the Package Manager Console and run the following command:<br>
 
 Update-Database<br>
+
+Use SQL Server Management Studio to create the database.<br>
+
+Run the following query to add the bank names:<br>
+
+INSERT INTO [dbo].[Banks] ([Name]) VALUES ('Millennium');<br>
+INSERT INTO [dbo].[Banks] ([Name]) VALUES ('Montepio');<br>
+INSERT INTO [dbo].[Banks] ([Name]) VALUES ('NovoBanco');<br>
+INSERT INTO [dbo].[Banks] ([Name]) VALUES ('Santander');<br>
+
+Run the following query to add a user name:<br>
+
+INSERT INTO [dbo].[Users] ([FirstName], [LastName], [Email], [Password], [PhoneNumber], [Balance], [BankId])
+VALUES ('John', 'Doe', 'john.doe@email.com', 'password123', '123456789', 1000, 1);
 
 Build the solution using Ctrl + Shift + B or by going to Build > Build Solution.<br>
 
