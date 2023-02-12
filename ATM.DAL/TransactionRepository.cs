@@ -1,4 +1,5 @@
 ﻿using ATM.Domain;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,13 +36,22 @@ namespace ATM.DAL
             return transaction;
         }
 
+        public IEnumerable<Transaction> GetByUserId(int id)
+        {
+            IEnumerable<Transaction> transactionsList = new List<Transaction>();
+            transactionsList = Context.Transactions.Where(t =>
+            t.UserId == id
+            );
+
+            return transactionsList;
+        }
+
         public IEnumerable<Transaction> Search(string filterWord)
         {
             IEnumerable<Transaction> transactionsList = new List<Transaction>();
             transactionsList = Context.Transactions.Where(t =>
             string.IsNullOrEmpty(filterWord)
             || t.Name.Contains(filterWord)
-            || t.time.Day.Equals(filterWord)
             );
 
             return transactionsList;
@@ -59,5 +69,7 @@ namespace ATM.DAL
             Context.Transactions.Remove(transaction);
             Context.SaveChanges();
         }
+
+        
     }
 }

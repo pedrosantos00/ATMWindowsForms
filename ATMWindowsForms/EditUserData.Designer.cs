@@ -46,114 +46,148 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(6, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 17);
+            this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Primeiro Nome";
+            this.label1.Text = "Primeiro Nome:";
             // 
             // firstNameInput
             // 
-            this.firstNameInput.Location = new System.Drawing.Point(124, 29);
+            this.firstNameInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.firstNameInput.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.firstNameInput.ForeColor = System.Drawing.SystemColors.Control;
+            this.firstNameInput.Location = new System.Drawing.Point(140, 29);
             this.firstNameInput.Name = "firstNameInput";
-            this.firstNameInput.Size = new System.Drawing.Size(100, 25);
+            this.firstNameInput.Size = new System.Drawing.Size(137, 26);
             this.firstNameInput.TabIndex = 1;
             // 
             // lastNameInput
             // 
-            this.lastNameInput.Location = new System.Drawing.Point(124, 60);
+            this.lastNameInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lastNameInput.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lastNameInput.ForeColor = System.Drawing.SystemColors.Control;
+            this.lastNameInput.Location = new System.Drawing.Point(140, 59);
             this.lastNameInput.Name = "lastNameInput";
-            this.lastNameInput.Size = new System.Drawing.Size(100, 25);
+            this.lastNameInput.Size = new System.Drawing.Size(137, 26);
             this.lastNameInput.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 63);
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(6, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 17);
+            this.label2.Size = new System.Drawing.Size(134, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Segundo Nome";
+            this.label2.Text = "Segundo Nome:";
             // 
             // emailInput
             // 
-            this.emailInput.Location = new System.Drawing.Point(63, 91);
+            this.emailInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.emailInput.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.emailInput.ForeColor = System.Drawing.SystemColors.Control;
+            this.emailInput.Location = new System.Drawing.Point(75, 91);
             this.emailInput.Name = "emailInput";
-            this.emailInput.Size = new System.Drawing.Size(100, 25);
+            this.emailInput.Size = new System.Drawing.Size(251, 26);
             this.emailInput.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 94);
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(6, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(57, 19);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Email";
+            this.label3.Text = "Email:";
             // 
             // passwordInput
             // 
-            this.passwordInput.Location = new System.Drawing.Point(422, 29);
+            this.passwordInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.passwordInput.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passwordInput.ForeColor = System.Drawing.SystemColors.Control;
+            this.passwordInput.Location = new System.Drawing.Point(440, 29);
             this.passwordInput.Name = "passwordInput";
-            this.passwordInput.Size = new System.Drawing.Size(100, 25);
+            this.passwordInput.Size = new System.Drawing.Size(141, 26);
             this.passwordInput.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(283, 32);
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(298, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 17);
+            this.label4.Size = new System.Drawing.Size(136, 19);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Nova Password";
+            this.label4.Text = "Nova Password:";
             // 
             // repeatPasswordInput
             // 
-            this.repeatPasswordInput.Location = new System.Drawing.Point(422, 60);
+            this.repeatPasswordInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.repeatPasswordInput.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.repeatPasswordInput.ForeColor = System.Drawing.SystemColors.Control;
+            this.repeatPasswordInput.Location = new System.Drawing.Point(440, 61);
             this.repeatPasswordInput.Name = "repeatPasswordInput";
-            this.repeatPasswordInput.Size = new System.Drawing.Size(100, 25);
+            this.repeatPasswordInput.Size = new System.Drawing.Size(141, 26);
             this.repeatPasswordInput.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(283, 63);
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(283, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 17);
+            this.label5.Size = new System.Drawing.Size(151, 19);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Repetir Password";
+            this.label5.Text = "Repetir Password:";
             // 
             // phoneNumberInput
             // 
-            this.phoneNumberInput.Location = new System.Drawing.Point(269, 91);
+            this.phoneNumberInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.phoneNumberInput.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.phoneNumberInput.ForeColor = System.Drawing.SystemColors.Control;
+            this.phoneNumberInput.Location = new System.Drawing.Point(440, 91);
             this.phoneNumberInput.Name = "phoneNumberInput";
-            this.phoneNumberInput.Size = new System.Drawing.Size(100, 25);
+            this.phoneNumberInput.Size = new System.Drawing.Size(141, 26);
             this.phoneNumberInput.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(182, 94);
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(332, 91);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 17);
+            this.label6.Size = new System.Drawing.Size(102, 19);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Nº Telefone";
+            this.label6.Text = "Nº Telefone:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(381, 91);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(440, 123);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.Size = new System.Drawing.Size(141, 45);
             this.button1.TabIndex = 12;
             this.button1.Text = "Alterar Dados";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EditUserData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 135);
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ClientSize = new System.Drawing.Size(610, 180);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.phoneNumberInput);
             this.Controls.Add(this.label6);
@@ -168,7 +202,11 @@
             this.Controls.Add(this.firstNameInput);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "EditUserData";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditUserData";
             this.ResumeLayout(false);

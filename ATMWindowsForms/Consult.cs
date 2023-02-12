@@ -24,6 +24,14 @@ namespace ATMWindowsForms
             _user = user;
             _userService = userService;
             _transactionService = transactionService;
+            WelcomeMessage(user);
+        }
+
+
+
+
+        private void WelcomeMessage(User user)
+        {
             InitLabel.Text = string.Format($"Olá, {user.FirstName} ");
             Transaction transcation = new Transaction();
             transcation.time = DateTime.Now;
@@ -37,5 +45,47 @@ namespace ATMWindowsForms
             balanceData.Text += user.Balance.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("es-es"));
         }
 
+        private void ConsultBtn_Click(object sender, EventArgs e)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    dataGridView1.DataSource = _transactionService.Search("Login");
+                    break;
+
+                case 1:
+                    dataGridView1.DataSource = _transactionService.Search("Deposit");
+                    break;
+
+                case 2:
+                    dataGridView1.DataSource = _transactionService.Search("Withdraw");
+                    break;
+
+                case 3:
+                    dataGridView1.DataSource = _transactionService.Search("Transfer");
+                    break;
+
+                case 4:
+                    dataGridView1.DataSource = _transactionService.Search("MBWAY");
+                    break;
+
+                case 5:
+                    List<Transaction> transactions = new List<Transaction> { };
+                    transactions.AddRange(_transactionService.Search("Deposit"));
+                    transactions.AddRange(_transactionService.Search("Withdraw"));
+                    transactions.AddRange(_transactionService.Search("Transfer"));
+                    transactions.AddRange(_transactionService.Search("MBWAY"));
+                    dataGridView1.DataSource = transactions;
+                    break;
+
+                case 6:
+                    dataGridView1.DataSource = _transactionService.GetByUserId(_user.Id);
+                    break;
+
+                default:
+                    dataGridView1.DataSource = null;
+                    break;
+            }
+        }
     }
 }

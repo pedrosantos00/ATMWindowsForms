@@ -1,7 +1,10 @@
+using System.Configuration;
+
 namespace ATMWindowsForms
 {
     internal static class Program
     {
+        private static readonly string _connectionstring = ConfigurationManager.ConnectionStrings["ATMdb"].ConnectionString;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -16,7 +19,7 @@ namespace ATMWindowsForms
 
         private static void Login()
         {
-            ATMLogin loginForm = new ATMLogin();
+            ATMLogin loginForm = new ATMLogin(_connectionstring);
             Application.Run(loginForm);
 
             if (loginForm.UserSuccessfullyAuthenticated)

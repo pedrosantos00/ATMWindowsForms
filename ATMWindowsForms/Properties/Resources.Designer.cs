@@ -63,6 +63,16 @@ namespace ATMWindowsForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ecrans_atm_1_700x260 {
+            get {
+                object obj = ResourceManager.GetObject("ecrans_atm_1_700x260", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_banco_comercial_portugus_bank_millennium_s_a_co_portugal_5b0c080d3e26f9_2712041015275151492546 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-banco-comercial-portugus-bank-millennium-s-a-co-portugal-5b0c080d3e26f9.2" +

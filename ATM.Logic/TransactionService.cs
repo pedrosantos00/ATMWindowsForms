@@ -38,6 +38,10 @@ namespace ATM.Logic
         {
             return _transactionRepository.GetById(id);
         }
+        public List<Transaction> GetByUserId(int id)
+        {
+            return _transactionRepository.GetByUserId(id).ToList();
+        }
 
         public List<Transaction> Search(string filterword)
         {

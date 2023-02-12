@@ -25,5 +25,61 @@ namespace ATMWindowsForms
             _userService = userService;
             _transactionService = transactionService;
         }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void confirmBtn_Click(object sender, EventArgs e)
+        {
+          
+            try
+            {
+                bool flagEntity = CheckEntity();
+                bool flagRef = CheckRef();
+                float balance = float.Parse(balanceInput.Text);
+                if (_user.Balance >= balance && flagRef && flagEntity)
+                {
+                    _user.Balance -= balance;
+                    Transaction transcation = new Transaction();
+                    transcation.time = DateTime.Now;
+                    transcation.UserId = _user.Id;
+                    transcation.Name = "Payment";
+                    transcation.Description = string.Format($"" +
+                        $"Time: {transcation.time.ToString("g")}" +
+                        $"\n User ID:{_user.Id}" +
+                        $"\n Entity : {entityInput.Text}" +
+                        $"\n Reference : {refInput.Text}" +
+                        $"\n Balance : {balance}" +
+                        $"\n Actual Balance {_user.Balance}");
+
+                    _transactionService.Create(transcation);
+                    MessageBox.Show("Pagamento Com Sucesso!");
+                    _userService.Update(_user);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Preencha devidamente os campos!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private bool CheckRef()
+        {
+            if (entityInput.Text.Length >= 2 || !string.IsNullOrEmpty(entityInput.Text)) return true;
+            else return false;
+        }
+
+        private bool CheckEntity()
+        {
+            if (refInput.Text.Length >= 2 || !string.IsNullOrEmpty(refInput.Text)) return true;
+            else return false;
+        }
     }
 }

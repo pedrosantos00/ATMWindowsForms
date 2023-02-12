@@ -21,16 +21,17 @@ namespace ATMWindowsForms
         private readonly UserService _userService;
         private readonly BankService _bankService;
         private readonly TransactionService _transactionService;
+        private readonly string _connectionString;
         private List<User> _userList;
-        private string _connectionstring = ConfigurationManager.ConnectionStrings["ATMdb"].ConnectionString;
         private User _user;
-        public ATMLogin()
+        public ATMLogin(string connectionstring)
         {
+            _connectionString = connectionstring;
             InitializeComponent();
 
-            UserRepository userRepository = new UserRepository(_connectionstring);
-            BankRepository bankRepository = new BankRepository(_connectionstring);
-            TransactionRepository transactionRepository = new TransactionRepository(_connectionstring);
+            UserRepository userRepository = new UserRepository(_connectionString);
+            BankRepository bankRepository = new BankRepository(_connectionString);
+            TransactionRepository transactionRepository = new TransactionRepository(_connectionString);
 
 
             _userService = new UserService(userRepository);
