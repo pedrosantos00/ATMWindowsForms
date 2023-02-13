@@ -11,35 +11,44 @@ namespace ATM.DAL
     public class TransactionRepository
     {
         private string _connectionString { get; set; }
-        public ATMDbContext Context { get; set; }
-        public TransactionRepository(string connectionString)
+        public ATMDbContext _context { get; set; }
+        public TransactionRepository(ATMDbContext? context,string connectionString)
         {
             _connectionString = connectionString;
-            if (Context == null)
-            {
-                Context = new ATMDbContext();
-            }
+            if (_context == null) _context = context;
+
+        }
+
+        public TransactionRepository(string connectionstring)
+        {
+            _connectionString = connectionstring;
+            if (this._context == null) this._context = new ATMDbContext();
+        }
+
+        public TransactionRepository(ATMDbContext context)
+        {
+            if (_context == null) _context = context;
         }
 
         //CRUD
 
         public int Create (Transaction transaction)
         {
-            Context.Transactions.Add(transaction);
-            Context.SaveChanges();
+            _context.Transactions.Add(transaction);
+            _context.SaveChanges();
             return transaction.Id;
         }
 
         public Transaction? GetById(int id)
         {
-            Transaction? transaction = Context.Transactions.FirstOrDefault(t => t.Id == id);
+            Transaction? transaction = _context.Transactions.FirstOrDefault(t => t.Id == id);
             return transaction;
         }
 
         public IEnumerable<Transaction> GetByUserId(int id)
         {
             IEnumerable<Transaction> transactionsList = new List<Transaction>();
-            transactionsList = Context.Transactions.Where(t =>
+            transactionsList = _context.Transactions.Where(t =>
             t.UserId == id
             );
 
@@ -49,7 +58,7 @@ namespace ATM.DAL
         public IEnumerable<Transaction> Search(string filterWord)
         {
             IEnumerable<Transaction> transactionsList = new List<Transaction>();
-            transactionsList = Context.Transactions.Where(t =>
+            transactionsList = _context.Transactions.Where(t =>
             string.IsNullOrEmpty(filterWord)
             || t.Name.Contains(filterWord)
             );
@@ -59,15 +68,15 @@ namespace ATM.DAL
 
         public int Update (Transaction transaction)
         {
-            Context.Transactions.Update(transaction);
-            Context.SaveChanges();
+            _context.Transactions.Update(transaction);
+            _context.SaveChanges();
             return transaction.Id;
         }
 
         public void Delete (Transaction transaction)
         {
-            Context.Transactions.Remove(transaction);
-            Context.SaveChanges();
+            _context.Transactions.Remove(transaction);
+            _context.SaveChanges();
         }
 
         

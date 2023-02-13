@@ -72,13 +72,13 @@ namespace ATMWindowsForms
 
         private bool CheckRef()
         {
-            if (entityInput.Text.Length >= 2 || !string.IsNullOrEmpty(entityInput.Text)) return true;
+            if (entityInput.Text.Length >= 5 || !string.IsNullOrEmpty(entityInput.Text)) return true;
             else return false;
         }
 
         private bool CheckEntity()
         {
-            if (refInput.Text.Length >= 2 || !string.IsNullOrEmpty(refInput.Text)) return true;
+            if (refInput.Text.Length >= 9 || !string.IsNullOrEmpty(refInput.Text)) return true;
             else return false;
         }
     }

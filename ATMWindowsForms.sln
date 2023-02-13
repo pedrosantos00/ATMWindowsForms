@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMWindowsForms", "ATMWindowsForms\ATMWindowsForms.csproj", "{E9A7478D-194A-4E37-B676-89647BCFB6EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATMWindowsForms", "ATMWindowsForms\ATMWindowsForms.csproj", "{E9A7478D-194A-4E37-B676-89647BCFB6EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.DAL", "ATM.DAL\ATM.DAL.csproj", "{5CB40FCE-66CC-400F-BF0B-AE275D2F3195}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM.DAL", "ATM.DAL\ATM.DAL.csproj", "{5CB40FCE-66CC-400F-BF0B-AE275D2F3195}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.Logic", "ATM.Logic\ATM.Logic.csproj", "{B32A9C3A-A141-4D0F-AFA8-11E382D2FF71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM.Logic", "ATM.Logic\ATM.Logic.csproj", "{B32A9C3A-A141-4D0F-AFA8-11E382D2FF71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.Domain", "ATM.Domain\ATM.Domain.csproj", "{0047C786-55DE-4D07-AD42-F563FC8AF19B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM.Domain", "ATM.Domain\ATM.Domain.csproj", "{0047C786-55DE-4D07-AD42-F563FC8AF19B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.WebApi", "ATM.WebApi\ATM.WebApi.csproj", "{54E95881-4169-4552-B56C-383F223533C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0047C786-55DE-4D07-AD42-F563FC8AF19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0047C786-55DE-4D07-AD42-F563FC8AF19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0047C786-55DE-4D07-AD42-F563FC8AF19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E95881-4169-4552-B56C-383F223533C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E95881-4169-4552-B56C-383F223533C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E95881-4169-4552-B56C-383F223533C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E95881-4169-4552-B56C-383F223533C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

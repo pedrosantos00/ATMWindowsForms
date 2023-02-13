@@ -12,26 +12,35 @@ namespace ATM.DAL
     public class BankRepository
     {
         private string _connectionString { get; set; }
-        public ATMDbContext context { get; set; }
+        public ATMDbContext _context { get; set; }
+        public BankRepository(ATMDbContext? context, string connectionstring)
+        {
+            _connectionString = connectionstring;
+            if (this._context== null) this._context = context;
+        }
+
+        public BankRepository(ATMDbContext context)
+        {
+            if (this._context == null) this._context = context;
+        }
+
         public BankRepository(string connectionstring)
         {
             _connectionString = connectionstring;
-            if (context== null)
-            {
-                context = new ATMDbContext(_connectionString);
-            }
+            if (this._context == null) this._context = new ATMDbContext();
         }
+
         //CRUD
         public int Create(Bank bank)
         {
-            context.Banks.Add(bank);
-            context.SaveChanges();
+            _context.Banks.Add(bank);
+            _context.SaveChanges();
             return bank.Id;
         }
 
         public Bank? GetById (int id) 
         {
-            Bank? filteredBank = context.Banks.FirstOrDefault(b => b.Id == id);
+            Bank? filteredBank = _context.Banks.FirstOrDefault(b => b.Id == id);
             return filteredBank;
         }
 
@@ -39,7 +48,7 @@ namespace ATM.DAL
         {
             IEnumerable<Bank> filteredBanks = new List<Bank>();
             filteredBanks =
-                context.Banks.Where(b =>
+                _context.Banks.Where(b =>
                 string.IsNullOrEmpty(searchFilter)
                 || b.BankName.Contains(searchFilter)
                    );
@@ -48,15 +57,15 @@ namespace ATM.DAL
 
         public int Update(Bank bank)
         {
-            context.Banks.Update(bank);
-            context.SaveChanges();
+            _context.Banks.Update(bank);
+            _context.SaveChanges();
             return bank.Id;
         }
 
         public void Delete(Bank bank)
         {
-            context.Banks.Remove(bank);
-            context.SaveChanges();
+            _context.Banks.Remove(bank);
+            _context.SaveChanges();
         }
 
       
