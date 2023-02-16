@@ -43,9 +43,9 @@ namespace ATM.Logic
             return _transactionRepository.GetByUserId(id).ToList();
         }
 
-        public List<Transaction> Search(string filterword)
+        public List<Transaction> Search(string filterword, int userId)
         {
-            return _transactionRepository.Search(filterword).ToList();
+            return _transactionRepository.Search(filterword, userId).ToList();
         }
 
         public void Delete(int id)

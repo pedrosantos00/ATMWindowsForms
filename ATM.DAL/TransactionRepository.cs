@@ -55,12 +55,12 @@ namespace ATM.DAL
             return transactionsList;
         }
 
-        public IEnumerable<Transaction> Search(string filterWord)
+        public IEnumerable<Transaction> Search(string filterWord, int userId)
         {
             IEnumerable<Transaction> transactionsList = new List<Transaction>();
-            transactionsList = _context.Transactions.Where(t =>
+            transactionsList = _context.Transactions.Where(t => (
             string.IsNullOrEmpty(filterWord)
-            || t.Name.Contains(filterWord)
+            || t.Name.Contains(filterWord)) && t.UserId == userId 
             );
 
             return transactionsList;

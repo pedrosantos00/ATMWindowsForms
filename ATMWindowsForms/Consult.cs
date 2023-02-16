@@ -50,31 +50,31 @@ namespace ATMWindowsForms
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    dataGridView1.DataSource = _transactionService.Search("Login");
+                    dataGridView1.DataSource = _transactionService.Search("Login", _user.Id);
                     break;
 
                 case 1:
-                    dataGridView1.DataSource = _transactionService.Search("Deposit");
+                    dataGridView1.DataSource = _transactionService.Search("Deposit", _user.Id);
                     break;
 
                 case 2:
-                    dataGridView1.DataSource = _transactionService.Search("Withdraw");
+                    dataGridView1.DataSource = _transactionService.Search("Withdraw", _user.Id);
                     break;
 
                 case 3:
-                    dataGridView1.DataSource = _transactionService.Search("Transfer");
+                    dataGridView1.DataSource = _transactionService.Search("Transfer", _user.Id);
                     break;
 
                 case 4:
-                    dataGridView1.DataSource = _transactionService.Search("MBWAY");
+                    dataGridView1.DataSource = _transactionService.Search("MBWAY", _user.Id);
                     break;
 
                 case 5:
                     List<Transaction> transactions = new List<Transaction> { };
-                    transactions.AddRange(_transactionService.Search("Deposit"));
-                    transactions.AddRange(_transactionService.Search("Withdraw"));
-                    transactions.AddRange(_transactionService.Search("Transfer"));
-                    transactions.AddRange(_transactionService.Search("MBWAY"));
+                    transactions.AddRange(_transactionService.Search("Deposit", _user.Id));
+                    transactions.AddRange(_transactionService.Search("Withdraw", _user.Id));
+                    transactions.AddRange(_transactionService.Search("Transfer", _user.Id));
+                    transactions.AddRange(_transactionService.Search("MBWAY", _user.Id));
                     dataGridView1.DataSource = transactions;
                     break;
 
